@@ -8,11 +8,13 @@ var question7 = "Which of these is an array?";
 var question8 = "";
 var question9 = "";
 var question10 = "";
-var secondsLeft = 5;
+var secondsLeft = 60;
 var timeEl = document.querySelector(".time");
+var startBtn = document.getElementById("#start-btn");
 
 
-function setTime() {
+
+$("#start-btn").on("click", function() {
   var timerInterval = setInterval(function() {
     secondsLeft--;  
     timeEl.textContent = secondsLeft + " seconds left.";
@@ -24,10 +26,11 @@ function setTime() {
     }
 
   }, 1000);
-}
+})
 
 function sendMessage() {
     alert("You are out of time!")
+    timeEl.textContent = " ";
+    secondsLeft = 60
 }
 
-setTime();
