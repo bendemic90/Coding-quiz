@@ -13,7 +13,7 @@ var tenQuestions = [
 
   "Which of these is an array?",
 
-  "What will split(\"\") do to this array? - [1234]",
+  "What will .split(\"\") do to this array? [1234]",
 
   "What is the % operator called?",
 
@@ -56,22 +56,24 @@ var answers = [
   "var num = (1, 2, 3, 4, 5)",
   "const op = (){+, -, /, %, ^}",
 
-  "",
-  "",
-  "",
-  "",
+  "Empty the array",
+  "Turn the numbers into string",
+  "Seperate the numbers into individual indexes in an array",
+  "Create four arrays with [1234]",
 
-  "",
-  "",
-  "",
-  "",
+  "Concatenate",
+  "Log",
+  "Percentage",
+  "Modulus",
 
-  "",
-  "",
-  "",
-  "",
+  "12",
+  "4",
+  "8",
+  "48",
 ]
-var secondsLeft = 60;
+
+var score = 0;
+var secondsLeft = 5;
 var timeEl = document.querySelector(".time");
 var startBtn = document.getElementById("#start-btn");
 var questions = document.querySelector("#questions-here");
@@ -94,8 +96,7 @@ $("#start-btn").on("click", function () {
 });
 
 $("#start-btn").on("click", function () {
-  i = (Math.floor(Math.random() * tenQuestions.length));
-  console.log(i.length);
+  var i = (Math.floor(Math.random() * tenQuestions.length));
   questions.textContent = tenQuestions[i];
     if (questions.textContent === tenQuestions[0]) {
       answer1.textContent = answers[0]
@@ -103,68 +104,84 @@ $("#start-btn").on("click", function () {
       answer3.textContent = answers[2]
       answer4.textContent = answers[3]
       tenQuestions.splice(i, 1);
-      console.log(tenQuestions);
     }
     if (questions.textContent === tenQuestions[1]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[4]
+      answer2.textContent = answers[5]
+      answer3.textContent = answers[6]
+      answer4.textContent = answers[7]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[2]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[8]
+      answer2.textContent = answers[9]
+      answer3.textContent = answers[10]
+      answer4.textContent = answers[11]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[3]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[12]
+      answer2.textContent = answers[13]
+      answer3.textContent = answers[14]
+      answer4.textContent = answers[15]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[4]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[16]
+      answer2.textContent = answers[17]
+      answer3.textContent = answers[18]
+      answer4.textContent = answers[19]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[5]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[20]
+      answer2.textContent = answers[21]
+      answer3.textContent = answers[22]
+      answer4.textContent = answers[23]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[6]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[24]
+      answer2.textContent = answers[25]
+      answer3.textContent = answers[26]
+      answer4.textContent = answers[27]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[7]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[28]
+      answer2.textContent = answers[29]
+      answer3.textContent = answers[30]
+      answer4.textContent = answers[31]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[8]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[32]
+      answer2.textContent = answers[33]
+      answer3.textContent = answers[34]
+      answer4.textContent = answers[35]
+      tenQuestions.splice(i, 1);
     }
     if (questions.textContent === tenQuestions[9]) {
-      answer1.textContent = answers[0]
-      answer2.textContent = answers[1]
-      answer3.textContent = answers[2]
-      answer4.textContent = answers[3]
+      answer1.textContent = answers[36]
+      answer2.textContent = answers[37]
+      answer3.textContent = answers[38]
+      answer4.textContent = answers[39]
+      tenQuestions.splice(i, 1);
     }
+  
   });
 
 //$("#restart-btn").on("click", function(){})
 
 function sendMessage() {
   alert("You are out of time!");
+  alert("Your score is " + score)
   timeEl.textContent = " ";
+  answer1.textContent = "A";
+  answer2.textContent = "B";
+  answer3.textContent = "C";
+  answer4.textContent = "D";
+  questions.textContent = "...";
   secondsLeft = 60;
+  score = 0;
 }
