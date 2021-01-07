@@ -184,4 +184,26 @@ function sendMessage() {
   questions.textContent = "...";
   secondsLeft = 60;
   score = 0;
+  var tenQuestions = [
+    "In which HTML tag does JavaScript reside?",
+  
+    "Where does JavaScript go within the HTML file?",
+  
+    "How would someone make an alert box in JS that reads 'Click me'",
+  
+    "What is the correct syntax of a typical for loop?",
+  
+    "Which of these IF statements is correct?",
+  
+    "How many times will this for loop execute: 'for (i = 0; i < 97; i++)",
+  
+    "Which of these is an array?",
+  
+    "What will .split(\"\") do to this array? [1234]",
+  
+    "What is the % operator called?",
+  
+    "What will this return? Math.ceil(4, 8)",
+  
+  ];
 }
