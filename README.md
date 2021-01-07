@@ -3,24 +3,21 @@ A quiz consisting of various JavaScript questions.
 
 ## Features
 * Has a start button that loads the quiz, selecting random questions.
-* Correct answers increase your score by 1. Incorrect deducts 5 seconds from the timer.
-* 
-* 
-* 
+* Correct answers should have increased your score by 1, while incorrect would deduct time from the timer. I didn't get this far though.
+* Once a question is answered it SHOULD move you onto the next question, although this is not the case.
 
 
 ## Reasoning
-Users may sometimes want access to a third party password generator to use in conjunction with a password manager, which are becoming more popular these days. 
+Utilisation of randomisation and local storage, hiding elements and keeping it all together.
 
 ## Challenges & Process
-1. I found it very difficult to work out where to begin. I ended up deciding on simply starting with declaring arrays[] for each of the conditions: uppercase, lowercase, numbers and special characters.
-2. From there I went to work on the writePassword() function, starting simply with a character length prompt that pulls you back to the start of the function if you declare character length outside of parameters 8-128, and following it up with confirms for the rest of the conditions. Early on I console.log'd everything to check that it was working. I have still left some in for the sake of posterity, and it's nice to know things are working.
-3. Then came the generatePassword() function. I started with a console.log to check all my variables were still intact, then started an empty array called charArray which gets filled with whatever conditions are set by the user. e.g. all true = upper, lower, special and numbers @ length determined by user on initial prompt. For-loops push the initial arrays 1 by 1 into the new array if they are true. Initially I had lower case alphabet as a default state, but due to the constraints laid out I have changed it to a confirm(), if all cases are false it returns to the beginning.
-4. Finally, password. Set password to ""; which I think essentially just means empty (so that it may be filled), then fill it with charArray via a for-loop iterating # times = to whatever the password length was. 
-5. Console log the password to check it works, then query selector to fill the value into the field in the middle of the page.
+1. I found the layout process pretty easy, I used the Captain Planet activity and bootstrapped the layout from that.
+2. There's a lot of redundant code but I was running out of time to compact it all, resulting in lots of repitition and hundreds more lines than is necessary.
+3. The most challenging part was the decision to upload it as an assignment OR not upload anything at all.
+4. Definitely didn't leave myself enough time over the holidays to complete this.
 
 ## Link to deployed application
-https://bendemic90.github.io/week-3-pw-gen/
+https://bendemic90.github.io/Coding-quiz/
 
 ## Screengrab of deployed application
-![index.html](https://github.com/bendemic90/week-3-pw-gen/blob/main/assets/grab1.png)
+![index.html](https://github.com/bendemic90/Coding-quiz/blob/main/assets/grab.png)
